@@ -13,5 +13,10 @@ namespace ADS.Algorithms.Sorting
         {
             return list?.Length < 2 ? list : list.Sort(new BubbleSort<T>());
         }
+
+        public static T[] SelectionSort<T>(this T[] list) where T : IComparable<T>
+        {
+            return list?.Length < 2 ? list : list.Sort(new SelectionSort<T>());
+        }
     }
 }
