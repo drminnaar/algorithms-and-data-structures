@@ -1,0 +1,17 @@
+{
+    "name": "javascript-ads",
+    "version": "1.0.0",
+    "description":
+        "A collection of various algorithms implemented using the javascript programming language",
+    "main": "index.js",
+    "scripts": {
+        "test-bubblesort": "jest ./sorting/bubbleSort/test.js --watch",
+        "test": "jest"
+    },
+    "keywords": [],
+    "author": "Douglas Minnaar",
+    "license": "MIT",
+    "dependencies": {
+        "jest": "^23.0.0"
+    }
+}
