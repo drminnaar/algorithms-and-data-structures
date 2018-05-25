@@ -85,9 +85,12 @@ private void Sort(int[] list)
 ```javascript
 Javascript
 
-function(list) {
-
-    for (let lastUnsortedIndex = list.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
+function sort(list) {
+    for (
+        let lastUnsortedIndex = list.length - 1;
+        lastUnsortedIndex > 0;
+        lastUnsortedIndex--
+    ) {
         for (let i = 0; i < lastUnsortedIndex; i++) {
             if (list[i] > list[i + 1]) {
                 // swap
@@ -99,7 +102,7 @@ function(list) {
     }
 
     return list;
-};
+}
 ```
 
 #### Selection Sort
