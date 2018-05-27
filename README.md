@@ -62,7 +62,7 @@ Third Pass:
 ```csharp
 C#
 
-private void Sort(int[] list)
+public void Sort(int[] list)
 {
     for (int lastUnsortedIndex = list.Length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--)
     {
@@ -158,7 +158,7 @@ Fourth Pass:
 ```csharp
 C#
 
-private void Sort(int[] list)
+public void Sort(int[] list)
 {
     var maxValueIndex = 0;
 
@@ -182,11 +182,116 @@ private void Sort(int[] list)
 }
 ```
 
+#### Insertion Sort
+
+An _Insertion Sort_ algorithm is a comparison based sorting algorithm where a list is divided into two parts (sorted and unsorted). The list is repeatedly sorted by growing the sorted partition from the left until only the sorted parition remains. It's sort of like being dealt a card from a randomly arranged deck of cards. For each card that is dealt, you take that card and insert it into a sorted position in the cards that you hold. The deck of randomly arranged cards represents the unsorted partition whereas the cards that are held by you represent the sorted partition.
+
+The way _Insertion Sort_ works is as follows:
+
+* It starts out with position 0 representing the sorted partition
+* Position 1 represents the first element of the unsorted partition
+* For each pass of the algorithm, the first unsorted element of the unsorted partition is compared with each element in the sorted parition until it can be inserted into it's sorted position. This process continues until there are no more elements left in the unsorted partition and all that is left is the sorted parition.
+
+For example:
+
+We start off with an unsorted list of characters ([d, c, b, a]) as follows:
+
+position | 0 | 1 | 2 | 3
+--- | --- | --- | --- | ---
+elements | d | c | b | a
+
+```javascript
+First pass:
+
+Sorted Parition = [ d ]
+Unsorted Partition = [ c, b, a ]
+key = element at position 1 = c
+
+k <= d  then  list[1] = d  and  list[0] = c
+```
+
+After the first pass, our list looks as follows:
+
+position |0 | 1 | 2 | 3
+--- |--- | --- | --- | ---
+elements |c | d | b | a
+
+```javascript
+Second pass:
+
+Sorted Parition = [ c, d ]
+Unsorted Partition = [ b, a ]
+key = element at position 2 = b
+
+k <= d  then  list[2] = d  and  list[1] = b
+k <= c  then  list[1] = c  and  list[0] = b
+```
+
+After the second pass, our list looks as follows:
+
+position |0 | 1 | 2 | 3
+--- |--- | --- | --- | ---
+elements |b | c | d | a
+
+```javascript
+Third pass:
+
+Sorted Parition = [ b, c, d ]
+Unsorted Partition = [ a ]
+key = element at position 3 = a
+
+k <= d  then  list[3] = d  and  list[2] = a
+k <= c  then  list[2] = c  and  list[1] = a
+k <= b  then  list[1] = b  and  list[0] = a
+```
+
+After the third pass, our list looks as follows:
+
+position |0 | 1 | 2 | 3
+--- |--- | --- | --- | ---
+elements |a |b | c | d
+
+##### Time and Complexity
+
+* Worst Case Time Complexity [ Big-O ]: O(n<sup>2</sup>)
+* Best Case Time Complexity [Big-omega]: O(n)
+* Average Time Complexity [Big-theta]: O(n<sup>2</sup>)
+* Space Complexity: O(1)
+
+##### Code
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/InsertionSort.cs)
+
+```csharp
+public void Sort(int[] list)
+{
+    var k = 0;
+    var i = 0;
+
+    for (var firstUnsortedIndex = 1; firstUnsortedIndex < list.Length; firstUnsortedIndex++)
+    {
+        k = list[firstUnsortedIndex];
+        i = firstUnsortedIndex - 1;
+
+        while (i >= 0 && k < list[i])
+        {
+            // swap
+            var temp = list[i + 1];
+            list[i + 1] = list[i];
+            list[i] = temp;
+
+            i--;
+        }
+    }
+
+}
+```
+
 ---
 
 ## Authors
 
-*   **Douglas Minnaar** - _Initial work_ - [drminnaar](https://github.com/drminnaar)
+* **Douglas Minnaar** - _Initial work_ - [drminnaar](https://github.com/drminnaar)
 
 ---
 
