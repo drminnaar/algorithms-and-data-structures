@@ -1,6 +1,6 @@
 # Algorithms and Data Structures
 
-list project is a compilation of various algorithms and data structures that have been implemented using different programming lanaguages.
+This project is a compilation of various algorithms and data structures that have been implemented using different programming lanaguages.
 
 ---
 
@@ -12,7 +12,8 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
 
 ## Projects By Programming Language
 
-*   [C# Algorithms and Data Structures]
+* [C# Algorithms and Data Structures]
+* [Javascript algorithms and data structures]
 
 ---
 
@@ -295,4 +296,5 @@ public void Sort(int[] list)
 
 ---
 
-[c# algorithms and data structures]: https://github.com/drminnaar/algorithms-and-data-structures/tree/master/csharp-ads
+[C# algorithms and data structures]: https://github.com/drminnaar/algorithms-and-data-structures/tree/master/csharp-ads
+[Javascript algorithms and data structures]: https://github.com/drminnaar/algorithms-and-data-structures/tree/master/javascript-ads
