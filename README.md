@@ -311,6 +311,33 @@ public void Sort(int[] list)
 }
 ```
 
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/insertionSort/insertionSort.js)
+
+```javascript
+Javascript
+
+function sort(list) {
+    let key = 0;
+    let i = 0;
+
+    for (let firstUnsortedIndex = 1; firstUnsortedIndex < list.length; firstUnsortedIndex++) {
+        key = list[firstUnsortedIndex];
+        i = firstUnsortedIndex - 1;
+
+        while (i >= 0 && key < list[i]) {
+            // swap
+            const temp = list[i + 1];
+            list[i + 1] = list[i];
+            list[i] = temp;
+
+            i--;
+        }
+    }
+
+    return list;
+}
+```
+
 ---
 
 ## Authors

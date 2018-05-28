@@ -63,8 +63,32 @@ Furthermore, each algorithm or data structure will have it's own test.
 
 For example:
 
-The 'bubble sort' algorithm can be run using the following command:
+* Change to src directory
 
-```javascript
-npm run test-bubbleSort
-```
+   ```bash
+   cd algorithms-and-data-structures/javascript-ads/src
+   ```
+
+* Run All Tests
+
+  ```bash
+  npm test
+  ```
+
+* Run _'Bubble Sort'_ Test
+
+  ```bash
+  npm run test-bubblesort
+  ```
+
+* Run _'Insertion Sort'_ Test
+
+  ```bash
+  npm run test-insertionsort
+  ```
+
+* Run _'Selection Sort'_ Test
+
+  ```bash
+  npm run test-selectionsort
+  ```
