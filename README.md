@@ -91,9 +91,9 @@ function sort(list) {
         for (let i = 0; i < lastUnsortedIndex; i++) {
             if (list[i] > list[i + 1]) {
                 // swap
-                const temp = list[rhs];
-                list[rhs] = list[lhs];
-                list[lhs] = temp;
+                const temp = list[i + 1];
+                list[i + 1] = list[i];
+                list[i] = temp;
             }
         }
     }
