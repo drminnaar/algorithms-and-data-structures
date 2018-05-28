@@ -87,11 +87,7 @@ public void Sort(int[] list)
 Javascript
 
 function sort(list) {
-    for (
-        let lastUnsortedIndex = list.length - 1;
-        lastUnsortedIndex > 0;
-        lastUnsortedIndex--
-    ) {
+    for (let lastUnsortedIndex = list.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
         for (let i = 0; i < lastUnsortedIndex; i++) {
             if (list[i] > list[i + 1]) {
                 // swap
@@ -180,6 +176,33 @@ public void Sort(int[] list)
         list[lastUnsortedIndex] = list[maxValueIndex];
         list[maxValueIndex] = temp;
     }
+}
+```
+
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/selectionSort/selectionSort.js)
+
+```javascript
+Javascript
+
+function sort(list) {
+    let maxValueIndex = 0;
+
+    for (let lastUnsortedIndex = (list.length - 1); lastUnsortedIndex > 0; lastUnsortedIndex--) {
+        maxValueIndex = lastUnsortedIndex;
+
+        for (let i = 0; i <= lastUnsortedIndex; i++) {
+            if (list[i] > list[maxValueIndex]) {
+                maxValueIndex = i;
+            }
+        }
+
+        // swap
+        const temp = list[lastUnsortedIndex];
+        list[lastUnsortedIndex] = list[maxValueIndex];
+        list[maxValueIndex] = temp;
+    }
+
+    return list;
 }
 ```
 

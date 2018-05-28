@@ -1,7 +1,7 @@
 require('../../common/array-extensions');
 const { isEmpty, isFunction } = require('../../common/utils');
 
-const bubbleSort = function(list) {
+const selectionSort = function(list) {
     if (isEmpty(list)) {
         return list;
     }
@@ -15,21 +15,27 @@ const bubbleSort = function(list) {
         true
     );
 
+    let maxValueIndex = 0;
+
     for (let lastUnsortedIndex = list.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
-        for (let i = 0; i < lastUnsortedIndex; i++) {
+        maxValueIndex = lastUnsortedIndex;
+
+        for (let i = 0; i <= lastUnsortedIndex; i++) {
             if (allItemsComparable) {
-                if (list[i].compareTo(list[i + 1]) > 0) {
-                    list.swap(i, i + 1);
+                if (list[i].compareTo(list[maxValueIndex]) > 0) {
+                    maxValueIndex = i;
                 }
             } else {
-                if (list[i] > list[i + 1]) {
-                    list.swap(i, i + 1);
+                if (list[i] > list[maxValueIndex]) {
+                    maxValueIndex = i;
                 }
             }
         }
+
+        list.swap(maxValueIndex, lastUnsortedIndex);
     }
 
     return list;
 };
 
-module.exports = { bubbleSort };
+module.exports = { selectionSort };
