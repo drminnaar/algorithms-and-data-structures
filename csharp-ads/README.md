@@ -91,6 +91,12 @@ For example:
   dotnet test --filter ClassName=ADS.AlgorithmsTests.InsertionSortTest
   ```
 
+* Run _'Shell Sort'_ Test
+
+  ```bash
+  dotnet test --filter ClassName=ADS.AlgorithmsTests.ShellSortTest
+  ```
+
 ## Visual Studio Code Extensions for C# Development
 
 The following Visual Studio Code extensions should be installed for the best C# development experience.

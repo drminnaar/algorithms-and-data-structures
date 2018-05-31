@@ -8,6 +8,7 @@
         "test-bubblesort": "jest ./sorting/bubbleSort/test.js --watch",
         "test-insertionsort": "jest ./sorting/insertionSort/test.js --watch",
         "test-selectionsort": "jest ./sorting/selectionSort/test.js --watch",
+        "test-shellsort": "jest ./sorting/shellSort/test.js --watch",
         "test": "jest"
     },
     "keywords": [],

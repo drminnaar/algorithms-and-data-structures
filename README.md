@@ -13,7 +13,18 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
 ## Projects By Programming Language
 
 * [C# Algorithms and Data Structures]
+
 * [Javascript algorithms and data structures]
+
+---
+
+## Contents
+
+* [Algorithms](#algorithms)
+  * [Bubble Sort](#bubble-sort)
+  * [Selection Sort](#selection-sort)
+  * [Insertion Sort](#insertion-sort)
+  * [Shell Sort](#shell-sort)
 
 ---
 
@@ -331,6 +342,96 @@ function sort(list) {
             list[i] = temp;
 
             i--;
+        }
+    }
+
+    return list;
+}
+```
+
+#### Shell Sort
+
+In my explanation of an _Insertion Sort_ algorithm, I use the analogy of a dealer dealing out cards from an unsorted deck of cards where one takes each card and inserts it in it's appropriate position based on rank. The same analogy can be used to explain _Shell Sort_. Except now imagine that the dealer took his deck of cards and partially sorted it so that all the cards having the lowest values are on one side of the deck, and the cards having the largest values are on the opposite side of the deck. Therefore, when one is dealt a card, it is coming from a partially sorted deck of cards.
+
+Therefore, a _Shell Sort_ algorithm can be summarised as follows:
+
+* It's a variation of the _Insertion Sort_ algorithm
+* Therefore, _Shell Sort_ is a also comparison based sorting algorithm. However, unlike _Insertion Sort_, it is not a stable sorting algorithm.
+* Due to the introduction of a _gap_ value, elements that are distant from each other (based on gap) are compared to each other as opposed to adjacent elements.
+* Once the _Shell Sort_ algorithm reaches a _gap_ value of 1, it is equivalent to an _Insertion Sort_.
+* The reason for introducing a _gap_ value that is greater than 1, is to reduce the number of _shifting_ that occurs in a standard _Insertion Sort_ algorithm. Therefore, by the time the _Shell Sort_ algorithm reaches a value of 1, it is partially sorted.
+
+The way _Shell Sort_ works is as follows:
+
+* Where _Insertion Sort_ chooses an element to insert using a _gap_ of 1, _Shell Sort_ starts out using a larger _gap_.
+* The _gap_ value is determined based on a _"strategy"_ that helps calculate a value that provides the lowest time complexity. A common _strategy_ that is used in many _Shell Sort_ algorithm examples, is to calculate the _gap_ value by initially dividing the list length by 2. Then with each pass, the _gap_ value is divided by 2 until the _gap_ is 1
+* Once a _gap_ value of 1 is reached, the sort algorithm is equivalent to an _Insertion Sort_ algorithm.
+
+##### Time and Complexity
+
+* Worst Case Time Complexity [ Big-O ]: O(n<sup>2</sup>)
+* Best Case Time Complexity [Big-omega]: O(n(log(n))<sup>2</sup>)
+* Average Time Complexity [Big-theta]: O(n(log(n))<sup>2</sup>)
+* Space Complexity: O(1)
+
+##### Code
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/ShellSort.cs)
+
+```csharp
+public void Sort(int[] list)
+{
+    var i = 0;
+    var j = 0;
+    var key = 0;
+
+    for (int gap = list.Length / 2; gap > 0; gap /= 2)
+    {
+        for (i = gap; i < list.Length; i++)
+        {
+            key = list[i];
+            j = i;
+
+            while (j >= gap && key < list[j - gap])
+            {
+                // swap
+                var temp = list[j - gap];
+                list[j - gap] = list[j];
+                list[j] = temp;
+
+                j -= gap;
+            }
+        }
+    }
+}
+```
+
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/shellSort/shellSort.js)
+
+```javascript
+Javascript
+
+function sort(list) {
+    let i = 0;
+    let j = 0;
+    let key = 0;
+
+    for (let gap = list.length / 2; gap > 0; gap /= 2)
+    {
+        for (i = gap; i < list.length; i++)
+        {
+            key = list[i];
+            j = i;
+
+            while (j >= gap && key < list[j - gap])
+            {
+                // swap
+                var temp = list[j - gap];
+                list[j - gap] = list[j];
+                list[j] = temp;
+
+                j -= gap;
+            }
         }
     }
 

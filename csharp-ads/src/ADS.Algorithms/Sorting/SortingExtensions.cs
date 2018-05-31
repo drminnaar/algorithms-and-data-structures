@@ -19,6 +19,11 @@ namespace ADS.Algorithms.Sorting
             return list?.Length < 2 ? list : list.Sort(new SelectionSort<T>());
         }
 
+        public static T[] ShellSort<T>(this T[] list) where T : IComparable<T>
+        {
+            return list?.Length < 2 ? list : list.Sort(new ShellSort<T>());
+        }
+
         public static T[] InsertionSort<T>(this T[] list) where T : IComparable<T>
         {
             return list?.Length < 2 ? list : list.Sort(new InsertionSort<T>());
