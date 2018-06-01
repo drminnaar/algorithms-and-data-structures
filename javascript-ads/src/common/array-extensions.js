@@ -7,3 +7,10 @@ Array.prototype.swap = function(lhs, rhs) {
     this[rhs] = this[lhs];
     this[lhs] = temp;
 };
+
+Array.prototype.copy = function(sourceIndex, destination, destinationIndex, length) {
+    while (length !== 0) {
+        destination[destinationIndex++] = this[sourceIndex++];
+        length--;
+    }
+};

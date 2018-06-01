@@ -9,6 +9,7 @@
         "test-insertionsort": "jest ./sorting/insertionSort/test.js --watch",
         "test-selectionsort": "jest ./sorting/selectionSort/test.js --watch",
         "test-shellsort": "jest ./sorting/shellSort/test.js --watch",
+        "test-mergesort": "jest ./sorting/mergeSort/test.js --watch",
         "test": "jest"
     },
     "keywords": [],
