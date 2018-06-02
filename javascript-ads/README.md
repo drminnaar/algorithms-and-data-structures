@@ -98,3 +98,9 @@ For example:
   ```bash
   npm run test-shellsort
   ```
+
+  * Run _'Merge Sort'_ Test
+
+  ```bash
+  npm run test-mergesort
+  ```
