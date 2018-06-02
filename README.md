@@ -439,6 +439,133 @@ function sort(list) {
 }
 ```
 
+#### Merge Sort
+
+The _Merge Sort_ algorithm is a comparison based sorting algorithm that can be summarised as follows:
+
+* It is a divide and conquer algorithm
+* Typically implemented as a recursive algorithm
+* Primary made up of 2 phases namely a splitting and merging phase
+
+The _Merge Sort_ algorithm repeatedly splits a list unti all that remains is a collection of 1 element lists. A 1 element list is sorted due to there only being 1 element. Next, the _Merge Sort_ algorithm repeatedly merges all the sub-lists until all that remains is the sorted list.
+
+##### Merge Sort Examples
+
+[Merge Sort Algorithm. (n.d). In Wikipedia](https://en.wikipedia.org/wiki/File:Merge-sort-example-300px.gif)
+
+![Merge Sort Algorithm. (n.d). In Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+
+[Merge Sort With Transylvanian-saxon (German) Folk Dance](http://www.youtube.com/watch?v=XaqR3G_NVoo)
+
+[![Merge Sort with Transylvanian-saxon (German) folk dance](http://img.youtube.com/vi/XaqR3G_NVoo/0.jpg)](http://www.youtube.com/watch?v=XaqR3G_NVoo "Merge Sort with Transylvanian-saxon (German) folk dance")
+
+##### Merge Sort Time and Complexity
+
+* Worst Case Time Complexity [ Big-O ]: O(n log n)
+* Best Case Time Complexity [Big-omega]: O(n log n)
+* Average Time Complexity [Big-theta]: O(n log n)
+* Space Complexity: O(n)
+
+##### Merge Sort Code
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/MergeSort.cs)
+
+```csharp
+C#
+
+public void Sort(int[] list)
+{
+    MergeSort(list, new int[list.Length], 0, list.Length - 1);
+}
+
+private void MergeSort(int[] list, int[] tempList, int leftStart, int rightEnd)
+{
+    if (leftStart >= rightEnd)
+        return;
+
+    var middleIndex = (leftStart + rightEnd) / 2;
+    MergeSort(list, tempList, leftStart, middleIndex);
+    MergeSort(list, tempList, middleIndex + 1, rightEnd);
+    Merge(list, tempList, leftStart, rightEnd);
+}
+
+private void Merge(int[] list, int[] tempList, int leftStart, int rightEnd)
+{
+    var leftEnd = (leftStart + rightEnd) / 2;
+    var rightStart = leftEnd + 1;
+    var size = rightEnd - leftStart + 1;
+
+    var leftIndex = leftStart;
+    var rightIndex = rightStart;
+    var tempIndex = leftStart;
+
+    while (leftIndex <= leftEnd && rightIndex <= rightEnd)
+    {
+        tempList[tempIndex++] = list[leftIndex] < list[rightIndex]
+            ? list[leftIndex++]
+            : list[rightIndex++];
+    }
+
+    Array.Copy(list, leftIndex, tempList, tempIndex, leftEnd - leftIndex + 1);
+    Array.Copy(list, rightIndex, tempList, tempIndex, rightEnd - rightIndex + 1);
+    Array.Copy(tempList, leftStart, list, leftStart, size);
+}
+```
+
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/mergeSort/mergeSort.js)
+
+```javascript
+Javascript
+
+function sort(list) {
+
+    mergeSort(list, [], 0, list.length - 1);
+
+    return list;
+};
+
+function mergeSort(list, tempList, leftStart, rightEnd) {
+
+    if (leftStart >= rightEnd) {
+        return;
+    }
+
+    var middle = Math.floor((leftStart + rightEnd) / 2);
+
+    mergeSort(list, tempList, leftStart, middle);
+    mergeSort(list, tempList, middle + 1, rightEnd);
+    merge(list, tempList, leftStart, rightEnd);
+}
+
+function merge(list, tempList, leftStart, rightEnd) {
+
+    var leftEnd = Math.floor((leftStart + rightEnd) / 2);
+    var rightStart = leftEnd + 1;
+    var size = rightEnd - leftStart + 1;
+
+    var leftIndex = leftStart;
+    var rightIndex = rightStart;
+    var tempIndex = leftStart;
+
+    while (leftIndex <= leftEnd && rightIndex <= rightEnd) {
+        tempList[tempIndex++] = list[leftIndex] < list[rightIndex]
+            ? list[leftIndex++]
+            : list[rightIndex++];
+    }
+
+    list.copy(leftIndex, tempList, tempIndex, leftEnd - leftIndex + 1);
+    list.copy(rightIndex, tempList, tempIndex, rightEnd - rightIndex + 1);
+    tempList.copy(leftStart, list, leftStart, size);
+}
+
+Array.prototype.copy = function(sourceIndex, destination, destinationIndex, length) {
+    while (length !== 0) {
+        destination[destinationIndex++] = this[sourceIndex++];
+        length--;
+    }
+};
+```
+
 ---
 
 ## Authors
