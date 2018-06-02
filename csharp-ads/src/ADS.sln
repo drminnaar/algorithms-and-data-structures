@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.Algorithms", "ADS.Algorithms\ADS.Algorithms.csproj", "{E69C20F3-6E40-425B-AED1-1DA22B8E49E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.AlgorithmsTests", "ADS.AlgorithmsTests\ADS.AlgorithmsTests.csproj", "{BD93D763-DFFC-4742-A3DC-D73A482DC1EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.FX", "ADS.FX\ADS.FX.csproj", "{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,5 +46,17 @@ Global
 		{BD93D763-DFFC-4742-A3DC-D73A482DC1EC}.Release|x64.Build.0 = Release|x64
 		{BD93D763-DFFC-4742-A3DC-D73A482DC1EC}.Release|x86.ActiveCfg = Release|x86
 		{BD93D763-DFFC-4742-A3DC-D73A482DC1EC}.Release|x86.Build.0 = Release|x86
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|x64.Build.0 = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Debug|x86.Build.0 = Debug|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|x64.ActiveCfg = Release|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|x64.Build.0 = Release|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|x86.ActiveCfg = Release|Any CPU
+		{8B848611-BB32-42F8-ACF7-4ECF4DE84EB6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
