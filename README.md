@@ -72,7 +72,7 @@ Third Pass:
 
 [Bubble Sort with Hungarian ("Csángó") folk dance](http://www.youtube.com/watch?v=lyZQPjUT5B4)
 
-[![Bubble Sort with Hungarian ("Csángó") folk dance](http://img.youtube.com/vi/lyZQPjUT5B4/0.jpg)](http://www.youtube.com/watch?v=lyZQPjUT5B4 "Bubble Sort with Hungarian ("Csángó") folk dance")
+[![Bubble Sort with Hungarian (Csango) folk dance](http://img.youtube.com/vi/lyZQPjUT5B4/0.jpg)](http://www.youtube.com/watch?v=lyZQPjUT5B4 "Bubble Sort with Hungarian (Csango) folk dance")
 
 ##### Bubble Sort Code
 
