@@ -25,6 +25,7 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
   * [Selection Sort](#selection-sort)
   * [Insertion Sort](#insertion-sort)
   * [Shell Sort](#shell-sort)
+  * [Merge Sort](#merge-sort)
 
 ---
 
@@ -67,7 +68,13 @@ Third Pass:
 [1, 2, 3, 4, 5] -> [1, 2, 3, 4, 5] | 4 < 5 ? continue
 ```
 
-##### Code
+##### Bubble Sort Examples
+
+[Bubble Sort with Hungarian ("Csángó") folk dance](http://www.youtube.com/watch?v=lyZQPjUT5B4)
+
+[![Bubble Sort with Hungarian ("Csángó") folk dance](http://img.youtube.com/vi/lyZQPjUT5B4/0.jpg)](http://www.youtube.com/watch?v=lyZQPjUT5B4 "Bubble Sort with Hungarian ("Csángó") folk dance")
+
+##### Bubble Sort Code
 
 [C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/BubbleSort.cs)
 
@@ -159,7 +166,13 @@ Fourth Pass:
 - Decrement last unsorted index to 0
 ```
 
-##### Code
+##### Selection Sort Examples
+
+[Select Sort with Gypsy folk dance](http://www.youtube.com/watch?v=Ns4TPTC8whw )
+
+[![Select Sort with Gypsy folk dance](http://img.youtube.com/vi/Ns4TPTC8whw/0.jpg)](http://www.youtube.com/watch?v=Ns4TPTC8whw "Select Sort with Gypsy folk dance")
+
+##### Selection Sort Code
 
 [C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/SelectionSort.cs)
 
@@ -286,14 +299,20 @@ position |0 | 1 | 2 | 3
 --- |--- | --- | --- | ---
 elements |a |b | c | d
 
-##### Time and Complexity
+##### Insertion Sort Examples
+
+[Insertion Sort with Romanian folk dance](http://www.youtube.com/watch?v=ROalU379l3U)
+
+[![Insertion Sort with Romanian folk dance](http://img.youtube.com/vi/ROalU379l3U/0.jpg)](http://www.youtube.com/watch?v=ROalU379l3U "Insertion Sort with Romanian folk dance")
+
+##### Insertion Sort Time and Complexity
 
 * Worst Case Time Complexity [ Big-O ]: O(n<sup>2</sup>)
 * Best Case Time Complexity [Big-omega]: O(n)
 * Average Time Complexity [Big-theta]: O(n<sup>2</sup>)
 * Space Complexity: O(1)
 
-##### Code
+##### Insertion Sort Code
 
 [C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/InsertionSort.cs)
 
@@ -367,14 +386,20 @@ The way _Shell Sort_ works is as follows:
 * The _gap_ value is determined based on a _"strategy"_ that helps calculate a value that provides the lowest time complexity. A common _strategy_ that is used in many _Shell Sort_ algorithm examples, is to calculate the _gap_ value by initially dividing the list length by 2. Then with each pass, the _gap_ value is divided by 2 until the _gap_ is 1
 * Once a _gap_ value of 1 is reached, the sort algorithm is equivalent to an _Insertion Sort_ algorithm.
 
-##### Time and Complexity
+##### Shell Sort Examples
+
+[Shell Sort with Hungarian (Székely) folk dance](http://www.youtube.com/watch?v=CmPA7zE8mx0)
+
+[![Shell Sort with Hungarian (Székely) folk dance](http://img.youtube.com/vi/CmPA7zE8mx0/0.jpg)](http://www.youtube.com/watch?v=CmPA7zE8mx0 "Shell Sort with Hungarian (Székely) folk dance")
+
+##### Shell Sort Time and Complexity
 
 * Worst Case Time Complexity [ Big-O ]: O(n<sup>2</sup>)
 * Best Case Time Complexity [Big-omega]: O(n(log(n))<sup>2</sup>)
 * Average Time Complexity [Big-theta]: O(n(log(n))<sup>2</sup>)
 * Space Complexity: O(1)
 
-##### Code
+##### Shell Sort Code
 
 [C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/ShellSort.cs)
 
