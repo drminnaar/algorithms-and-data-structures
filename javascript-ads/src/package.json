@@ -1,8 +1,7 @@
 {
     "name": "javascript-ads",
     "version": "1.0.0",
-    "description":
-        "A collection of various algorithms implemented using the javascript programming language",
+    "description": "A collection of various algorithms implemented using the javascript programming language",
     "main": "index.js",
     "scripts": {
         "test-bubblesort": "jest ./sorting/bubbleSort/test.js --watch",
@@ -10,6 +9,7 @@
         "test-selectionsort": "jest ./sorting/selectionSort/test.js --watch",
         "test-shellsort": "jest ./sorting/shellSort/test.js --watch",
         "test-mergesort": "jest ./sorting/mergeSort/test.js --watch",
+        "test-quicksort": "jest ./sorting/quickSort/test.js --watch",
         "test": "jest"
     },
     "keywords": [],
