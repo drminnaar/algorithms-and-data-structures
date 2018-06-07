@@ -605,7 +605,7 @@ The _Quick Sort_ algorithm is an in-place and comparison based sorting algorithm
   * At this point the pivot is in it's correct sorted position
 * The paritioning process is repeated for the left subarray (array that is left of pivot) and right subarray (array that is right og pivot) until the list is sorted.
 
-##### Merge Sort Examples
+##### Quick Sort Examples
 
 [Merge Sort With Transylvanian-saxon (German) Folk Dance](https://www.youtube.com/watch?v=ywWBy6J5gz8)
 
@@ -618,7 +618,7 @@ The _Quick Sort_ algorithm is an in-place and comparison based sorting algorithm
 * Average Time Complexity [Big-theta]: O(n log n)
 * Space Complexity: O(n log n)
 
-##### Merge Sort Code
+##### Quick Sort Code
 
 [C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/QuickSort.cs)
 
