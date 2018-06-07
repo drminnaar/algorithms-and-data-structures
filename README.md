@@ -26,6 +26,7 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
   * [Insertion Sort](#insertion-sort)
   * [Shell Sort](#shell-sort)
   * [Merge Sort](#merge-sort)
+  * [Quick Sort](#quick-sort)
 
 ---
 
@@ -588,6 +589,127 @@ Array.prototype.copy = function(sourceIndex, destination, destinationIndex, leng
         destination[destinationIndex++] = this[sourceIndex++];
         length--;
     }
+};
+```
+
+#### Quick Sort
+
+The _Quick Sort_ algorithm is an in-place and comparison based sorting algorithm that can be summarised as follows:
+
+* It is a divide and conquer algorithm
+* Typically implemented as a recursive algorithm
+* Partitions the list into 2 parts by establishing a pivot
+  * A pivot may be determined using different techniques
+  * Elements less than pivot are moved to the left of pivot
+  * Elements greater than pivot are moved to the right of pivot
+  * At this point the pivot is in it's correct sorted position
+* The paritioning process is repeated for the left subarray (array that is left of pivot) and right subarray (array that is right og pivot) until the list is sorted.
+
+##### Merge Sort Examples
+
+[Merge Sort With Transylvanian-saxon (German) Folk Dance](https://www.youtube.com/watch?v=ywWBy6J5gz8)
+
+[![Quick sort with Hungarian folk dance](http://img.youtube.com/vi/ywWBy6J5gz8/0.jpg)](http://www.youtube.com/watch?v=ywWBy6J5gz8 "Quick sort with Hungarian folk dance")
+
+##### Quick Sort Time and Complexity
+
+* Worst Case Time Complexity [ Big-O ]: O(n<sup>2</sup>)
+* Best Case Time Complexity [Big-omega]: O(n log n)
+* Average Time Complexity [Big-theta]: O(n log n)
+* Space Complexity: O(n log n)
+
+##### Merge Sort Code
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.Algorithms/Sorting/QuickSort.cs)
+
+```csharp
+C#
+
+protected override void QickSort(T[] list)
+{
+    QickSort(list, 0, list.Length);
+}
+
+private void QickSort(T[] list, int start, int end)
+{
+    if (end - start < 2)
+        return;
+
+    var pivotIndex = Partition(list, start, end);
+    QickSort(list, start, pivotIndex);
+    QickSort(list, pivotIndex + 1, end);
+}
+
+private int Partition(T[] list, int start, int end)
+{
+    var pivot = list[start];
+    var left = start;
+    var right = end;
+
+    while (left < right)
+    {
+        while (left < right && list[--right] >= pivot) { }
+
+        if (left < right)
+            list[left] = list[right];
+
+        while (left < right && list[++left] <= pivot) { }
+
+        if (left < right)
+            list[right] = list[left];
+    }
+
+    list[right] = pivot;
+
+    return right;
+}
+```
+
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/quickSort/quickSort.js)
+
+```javascript
+Javascript
+
+const quickSort = function(list) {
+
+    sort(list, 0, list.length);
+
+    return list;
+};
+
+const sort = (list, start, end) => {
+    if (end - start < 2) {
+        return;
+    }
+
+    let pivot = partition(list, start, end);
+    sort(list, start, pivot);
+    sort(list, pivot + 1, end);
+};
+
+const partition = (list, start, end) => {
+    let pivot = list[start];
+    let left = start;
+    let right = end;
+
+    while (left < right) {
+
+        while (left < right && list[--right] >= pivot) {}
+
+        if (left < right) {
+            list[left] = list[right];
+        }
+
+        while (left < right && list[++left] <= pivot) {}
+
+        if (left < right) {
+            list[right] = list[left];
+        }
+    }
+
+    list[right] = pivot;
+
+    return right;
 };
 ```
 
