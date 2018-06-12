@@ -1,3 +1,5 @@
+using ADS.Data;
+
 namespace ADS.AlgorithmsTests.Data
 {
     internal static class TestData
@@ -25,38 +27,38 @@ namespace ADS.AlgorithmsTests.Data
         internal static Card[] UnsortedCards
         {
             get => new Card[13] {
-                new Card(Suit.Diamonds, 7),
-                new Card(Suit.Diamonds, 3),
-                new Card(Suit.Diamonds, 12),
-                new Card(Suit.Diamonds, 8),
-                new Card(Suit.Diamonds, 10),
-                new Card(Suit.Diamonds, 4),
-                new Card(Suit.Diamonds, 13),
-                new Card(Suit.Diamonds, 1),
-                new Card(Suit.Diamonds, 5),
-                new Card(Suit.Diamonds, 9),
-                new Card(Suit.Diamonds, 2),
-                new Card(Suit.Diamonds, 6),
-                new Card(Suit.Diamonds, 11),
+                Card.Diamonds(7),
+                Card.Diamonds(3),
+                Card.Diamonds(12),
+                Card.Diamonds(8),
+                Card.Diamonds(10),
+                Card.Diamonds(4),
+                Card.Diamonds(13),
+                Card.Diamonds(1),
+                Card.Diamonds(5),
+                Card.Diamonds(9),
+                Card.Diamonds(2),
+                Card.Diamonds(6),
+                Card.Diamonds(11),
             };
         }
 
         internal static Card[] SortedCards
         {
             get => new Card[13] {
-                new Card(Suit.Diamonds, 1),
-                new Card(Suit.Diamonds, 2),
-                new Card(Suit.Diamonds, 3),
-                new Card(Suit.Diamonds, 4),
-                new Card(Suit.Diamonds, 5),
-                new Card(Suit.Diamonds, 6),
-                new Card(Suit.Diamonds, 7),
-                new Card(Suit.Diamonds, 8),
-                new Card(Suit.Diamonds, 9),
-                new Card(Suit.Diamonds, 10),
-                new Card(Suit.Diamonds, 11),
-                new Card(Suit.Diamonds, 12),
-                new Card(Suit.Diamonds, 13),
+                Card.Diamonds(1),
+                Card.Diamonds(2),
+                Card.Diamonds(3),
+                Card.Diamonds(4),
+                Card.Diamonds(5),
+                Card.Diamonds(6),
+                Card.Diamonds(7),
+                Card.Diamonds(8),
+                Card.Diamonds(9),
+                Card.Diamonds(10),
+                Card.Diamonds(11),
+                Card.Diamonds(12),
+                Card.Diamonds(13),
             };
         }
     }

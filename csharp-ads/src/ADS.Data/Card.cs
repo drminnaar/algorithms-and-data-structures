@@ -1,8 +1,8 @@
 using System;
 
-namespace ADS.AlgorithmsTests.Data
+namespace ADS.Data
 {
-    internal enum Suit
+    public enum Suit
     {
         Clubs = 1,
         Diamonds = 2,
@@ -10,10 +10,17 @@ namespace ADS.AlgorithmsTests.Data
         Spades = 4
     }
 
-    internal sealed class Card : IComparable<Card>
+    public sealed class Card : IComparable<Card>
     {
         public Card(Suit suit, int rank)
         {
+            if (rank < 1 || rank > 13)
+            {
+                throw new ArgumentException(
+                    "Rank may only be a value from 1 to 13",
+                    nameof(rank));
+            }
+
             Suit = suit;
             Rank = rank;
         }
@@ -34,7 +41,7 @@ namespace ADS.AlgorithmsTests.Data
 
         public override string ToString()
         {
-            return $"( {Rank} : {Suit} )";
+            return $"Card ( Rank={Rank}, Suit={Suit} )";
         }
 
         public override int GetHashCode()
@@ -57,6 +64,26 @@ namespace ADS.AlgorithmsTests.Data
         public static bool operator !=(Card lhs, Card rhs)
         {
             return !(lhs == rhs);
+        }
+
+        public static Card Clubs(int rank)
+        {
+            return new Card(Suit.Clubs, rank);
+        }
+
+        public static Card Diamonds(int rank)
+        {
+            return new Card(Suit.Diamonds, rank);
+        }
+
+        public static Card Hearts(int rank)
+        {
+            return new Card(Suit.Hearts, rank);
+        }
+
+        public static Card Spades(int rank)
+        {
+            return new Card(Suit.Spades, rank);
         }
     }
 }

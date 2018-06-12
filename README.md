@@ -21,18 +21,21 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
 ## Contents
 
 * [Algorithms](#algorithms)
-  * [Bubble Sort](#bubble-sort)
-  * [Selection Sort](#selection-sort)
-  * [Insertion Sort](#insertion-sort)
-  * [Shell Sort](#shell-sort)
-  * [Merge Sort](#merge-sort)
-  * [Quick Sort](#quick-sort)
+  * [Sorting Algorithms](#sorting-algorithms)
+    * [Bubble Sort](#bubble-sort)
+    * [Selection Sort](#selection-sort)
+    * [Insertion Sort](#insertion-sort)
+    * [Shell Sort](#shell-sort)
+    * [Merge Sort](#merge-sort)
+    * [Quick Sort](#quick-sort)
 
+* [Data Structures](#data-structures)
+  * [Singly Linked List](#singly-linked-list)
 ---
 
 ## Algorithms
 
-### Sorting
+### Sorting Algorithms
 
 #### Bubble Sort
 
@@ -711,6 +714,60 @@ const partition = (list, start, end) => {
 
     return right;
 };
+```
+
+---
+
+## Data Structures
+
+### Singly Linked List
+
+* A _Singly Linked List_ is a data structure that represents a sequential list of _nodes_.
+* Each _node_ in the list contains a value and a pointer to the next _node_ that forms part of list.
+* The first _node_ is called the _Head_
+
+The following diagram illustrates a list of nodes, with each node consisting of a card as it's value and a _'Next'_ pointer to the next node in the list.
+
+![singly-linked-list](https://user-images.githubusercontent.com/33935506/41312381-31ea502c-6e87-11e8-97c8-071247623692.png)
+
+#### Examples
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/SinglyLinkedList.cs)
+
+```csharp
+C#
+
+public sealed class SinglyLinkedList<T> where T : class
+{
+    public long Count { get; private set; }
+
+    public Node<T> Head { get; private set; }
+
+    public void AddFront(T value)
+    {
+        var node = new Node<T>(value);
+        node.Next = Head;
+
+        Head = node;
+
+        Count++;
+    }
+
+    public Node<T> RemoveFront()
+    {
+        if (Head == null)
+        {
+            return null;
+        }
+
+        var removedNode = Head;
+        Head = removedNode.Next;
+        removedNode.Next = null;
+        Count--;
+
+        return removedNode;
+    }
+}
 ```
 
 ---

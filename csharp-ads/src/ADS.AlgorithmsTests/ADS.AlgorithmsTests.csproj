@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ADS.Algorithms\ADS.Algorithms.csproj" />
     <ProjectReference Include="..\ADS.FX\ADS.FX.csproj" />
+    <ProjectReference Include="..\ADS.Data\ADS.Data.csproj" />
   </ItemGroup>
 
 </Project>

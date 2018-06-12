@@ -2,11 +2,15 @@
 
 This is a repository of various data structures and algorithms that have been implemented using the C# programming language.
 
+---
+
 ## Developed With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring
 
 * [Dotnet Core](https://www.microsoft.com/net/learn/get-started) - .NET Core is a general purpose development platform maintained by Microsoft and the .NET community on GitHub. It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.
+
+---
 
 ## Getting Started
 
@@ -65,13 +69,15 @@ dotnet test
 
 Furthermore, each algorithm or data structure will have it's own test.
 
-For example:
+#### Algorithm Tests
 
 * Change to test directory
 
    ```bash
    cd algorithms-and-data-structures/csharp-ads/src/ADS.AlgorithmsTests
    ```
+
+##### Sorting Algorithm Tests
 
 * Run _'Bubble Sort'_ Test
 
@@ -103,11 +109,27 @@ For example:
   dotnet test --filter ClassName=ADS.AlgorithmsTests.MergeSortTest
   ```
 
-* Run _'Qucik Sort'_ Test
+* Run _'Quick Sort'_ Test
 
   ```bash
   dotnet test --filter ClassName=ADS.AlgorithmsTests.QuickSortTest
   ```
+
+#### Data Structure Tests
+
+* Change to test directory
+
+   ```bash
+   cd algorithms-and-data-structures/csharp-ads/src/ADS.DataStructuresTests
+   ```
+
+* Run _'Singly Linked List'_ Test
+
+  ```bash
+  dotnet test --filter ClassName=ADS.DataStructuresTests.SinglyLinkedListTest
+  ```
+
+---
 
 ## Visual Studio Code Extensions for C# Development
 
