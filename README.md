@@ -768,6 +768,19 @@ public sealed class SinglyLinkedList<T> where T : class
         return removedNode;
     }
 }
+
+public sealed class Node<T> where T : class
+{
+    public Node(T value)
+    {
+        Value = value;
+    }
+
+    public T Value { get; private set; }
+
+    public Node<T> Next { get; set; }
+}
+
 ```
 
 ---
