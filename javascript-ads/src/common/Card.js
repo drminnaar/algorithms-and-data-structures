@@ -20,7 +20,7 @@ Card.prototype = {
     },
 
     toString: function() {
-        return `Rank: ${this.rank} Suit: ${this.suit}`;
+        return `Card (rank=${this.rank}, suit=${this.suit})`;
     }
 };
 

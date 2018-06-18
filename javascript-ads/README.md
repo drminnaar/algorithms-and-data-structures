@@ -2,6 +2,20 @@
 
 This is a repository of various data structures and algorithms that have been implemented using the Javascript programming language.
 
+---
+
+## Contents
+
+* [Developed With](#developed-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Install](#install)
+  * [Running Tests](#running-tests)
+    * [Algorithm Tests](#algorithm-tests)
+    * [Data Structure Tests](#data-structure-tests)
+
+---
+
 ## Developed With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring
@@ -9,6 +23,8 @@ This is a repository of various data structures and algorithms that have been im
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 
 * [Jest](https://facebook.github.io/jest/) - Jest is used by Facebook to test all JavaScript code including React applications. One of Jest's philosophies is to provide an integrated "zero-configuration" experience.
+
+---
 
 ## Getting Started
 
@@ -75,10 +91,18 @@ For example:
   npm test
   ```
 
+#### Algorithm Tests
+
+##### Sorting Tests
+
 * Run _'Bubble Sort'_ Test
 
   ```bash
   npm run test-bubblesort
+  ```
+
+  ```bash
+  npm run test-bubblesort:watch
   ```
 
 * Run _'Insertion Sort'_ Test
@@ -87,10 +111,18 @@ For example:
   npm run test-insertionsort
   ```
 
+  ```bash
+  npm run test-insertionsort:watch
+  ```
+
 * Run _'Selection Sort'_ Test
 
   ```bash
   npm run test-selectionsort
+  ```
+
+  ```bash
+  npm run test-selectionsort:watch
   ```
 
 * Run _'Shell Sort'_ Test
@@ -99,14 +131,38 @@ For example:
   npm run test-shellsort
   ```
 
-  * Run _'Merge Sort'_ Test
+  ```bash
+  npm run test-shellsort:watch
+  ```
+
+* Run _'Merge Sort'_ Test
 
   ```bash
   npm run test-mergesort
   ```
 
-  * Run _'Quick Sort'_ Test
+  ```bash
+  npm run test-mergesort:watch
+  ```
+
+* Run _'Quick Sort'_ Test
 
   ```bash
   npm run test-quicksort
+  ```
+
+  ```bash
+  npm run test-quicksort:watch
+  ```
+
+#### Data Structure Tests
+
+* Run _'Singly Linked List'_ Test
+
+  ```bash
+  npm run singly-linked-list
+  ```
+
+  ```bash
+  npm run singly-linked-list:watch
   ```

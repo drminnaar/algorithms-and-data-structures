@@ -52,11 +52,20 @@ const getSortedCards = function() {
     ];
 };
 
+const getRandomCard = function() {
+    const suits = [Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades];
+    const suitIndex = Math.floor(4 * Math.random());
+    const suit = suits[suitIndex];
+    const rank = Math.ceil(13 * Math.random());
+    return new Card(rank, suit);
+};
+
 module.exports = {
     getUnsortedNumbers,
     getSortedNumbers,
     getUnsortedStrings,
     getSortedStrings,
     getSortedCards,
-    getUnsortedCards
+    getUnsortedCards,
+    getRandomCard
 };

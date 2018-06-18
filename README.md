@@ -31,6 +31,7 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
 
 * [Data Structures](#data-structures)
   * [Singly Linked List](#singly-linked-list)
+
 ---
 
 ## Algorithms
@@ -103,7 +104,7 @@ public void Sort(int[] list)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/bubbleSort/bubbleSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/bubbleSort/bubbleSort.js)
 
 ```javascript
 Javascript
@@ -207,7 +208,7 @@ public void Sort(int[] list)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/selectionSort/selectionSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/selectionSort/selectionSort.js)
 
 ```javascript
 Javascript
@@ -345,7 +346,7 @@ public void Sort(int[] list)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/insertionSort/insertionSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/insertionSort/insertionSort.js)
 
 ```javascript
 Javascript
@@ -435,7 +436,7 @@ public void Sort(int[] list)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/shellSort/shellSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/shellSort/shellSort.js)
 
 ```javascript
 Javascript
@@ -541,7 +542,7 @@ private void Merge(int[] list, int[] tempList, int leftStart, int rightEnd)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/mergeSort/mergeSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/mergeSort/mergeSort.js)
 
 ```javascript
 Javascript
@@ -668,7 +669,7 @@ private int Partition(T[] list, int start, int end)
 }
 ```
 
-[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/sorting/quickSort/quickSort.js)
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/algorithms/sorting/quickSort/quickSort.js)
 
 ```javascript
 Javascript
@@ -779,6 +780,66 @@ public sealed class Node<T> where T : class
     public T Value { get; private set; }
 
     public Node<T> Next { get; set; }
+}
+
+```
+
+[Javascript Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/javascript-ads/src/data-structures/singly-linked-list/SinglyLinkedList.js)
+
+```javascript
+Javascript
+
+class SinglyLinkedList {
+
+    constructor() {
+        this.head = null;
+        this.count = 0;
+    }
+
+    any() {
+        return this.head !== null;
+    }
+
+    addFront(value) {
+        const node = new Node(value);
+        node.next = this.head;
+
+        this.head = node;
+
+        this.count++;
+    }
+
+    removeFront() {
+        if (!this.any()) {
+            return null;
+        }
+
+        const removedNode = this.head;
+        this.head = removedNode.next;
+        removedNode.next = null;
+
+        this.count--;
+
+        return removedNode;
+    }
+
+    toArray() {
+        const nodes = [];
+
+        let currentNode = this.head;
+
+        while (currentNode != null) {
+            nodes.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+
+        return nodes;
+    }
+
+    toString() {
+        const nodes = this.toArray();
+        return `SinglyLinkedList [ ${nodes.join(' -> ')} ]`;
+    }
 }
 
 ```

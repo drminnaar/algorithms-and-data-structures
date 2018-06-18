@@ -10,7 +10,9 @@
         "test-shellsort": "jest ./algorithms/sorting/shellSort/test.js --watch",
         "test-mergesort": "jest ./algorithms/sorting/mergeSort/test.js --watch",
         "test-quicksort": "jest ./algorithms/sorting/quickSort/test.js --watch",
-        "test": "jest ./algorithms"
+        "test-singly-linked-list": "jest ./data-structures/singly-linked-list/test.js",
+        "test-singly-linked-list:watch": "jest ./data-structures/singly-linked-list/test.js --watch",
+        "test": "jest"
     },
     "keywords": [],
     "author": "Douglas Minnaar",
