@@ -1,5 +1,5 @@
-require('../../common/array-extensions');
-const { isEmpty, isFunction } = require('../../common/utils');
+require('../../../common/array-extensions');
+const { isEmpty, isFunction } = require('../../../common/utils');
 
 const mergeSort = function(list) {
     if (isEmpty(list)) {

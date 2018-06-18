@@ -7,7 +7,7 @@ const {
     getSortedStrings,
     getSortedCards,
     getUnsortedCards
-} = require('../../common/test-data');
+} = require('../../../common/test-data');
 
 describe('Bubble sort list of numbers', () => {
     test('sorts a list of numbers', () => {

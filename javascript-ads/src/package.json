@@ -4,13 +4,13 @@
     "description": "A collection of various algorithms implemented using the javascript programming language",
     "main": "index.js",
     "scripts": {
-        "test-bubblesort": "jest ./sorting/bubbleSort/test.js --watch",
-        "test-insertionsort": "jest ./sorting/insertionSort/test.js --watch",
-        "test-selectionsort": "jest ./sorting/selectionSort/test.js --watch",
-        "test-shellsort": "jest ./sorting/shellSort/test.js --watch",
-        "test-mergesort": "jest ./sorting/mergeSort/test.js --watch",
-        "test-quicksort": "jest ./sorting/quickSort/test.js --watch",
-        "test": "jest"
+        "test-bubblesort": "jest ./algorithms/sorting/bubbleSort/test.js --watch",
+        "test-insertionsort": "jest ./algorithms/sorting/insertionSort/test.js --watch",
+        "test-selectionsort": "jest ./algorithms/sorting/selectionSort/test.js --watch",
+        "test-shellsort": "jest ./algorithms/sorting/shellSort/test.js --watch",
+        "test-mergesort": "jest ./algorithms/sorting/mergeSort/test.js --watch",
+        "test-quicksort": "jest ./algorithms/sorting/quickSort/test.js --watch",
+        "test": "jest ./algorithms"
     },
     "keywords": [],
     "author": "Douglas Minnaar",
