@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ADS.DataStructures
+namespace ADS.DataStructures.SinglyLinkedList
 {
     public sealed class SinglyLinkedList<T> where T : class
     {

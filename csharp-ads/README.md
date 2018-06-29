@@ -129,6 +129,12 @@ Furthermore, each algorithm or data structure will have it's own test.
   dotnet test --filter ClassName=ADS.DataStructuresTests.SinglyLinkedListTest
   ```
 
+* Run _'Doubly Linked List'_ Test
+
+  ```bash
+  dotnet test --filter ClassName=ADS.DataStructuresTests.DoublyLinkedListTest
+  ```
+
 ---
 
 ## Visual Studio Code Extensions for C# Development

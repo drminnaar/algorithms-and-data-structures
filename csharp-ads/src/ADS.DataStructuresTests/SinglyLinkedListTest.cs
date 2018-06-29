@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using ADS.Data;
-using ADS.DataStructures;
+using ADS.DataStructures.SinglyLinkedList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ADS.DataStructuresTests

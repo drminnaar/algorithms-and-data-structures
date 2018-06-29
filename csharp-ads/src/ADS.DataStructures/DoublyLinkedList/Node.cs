@@ -1,4 +1,4 @@
-namespace ADS.DataStructures
+namespace ADS.DataStructures.DoublyLinkedList
 {
     public sealed class Node<T> where T : class
     {
@@ -7,14 +7,11 @@ namespace ADS.DataStructures
             Value = value;
         }
 
-        public T Value { get; private set; }
-
         public Node<T> Next { get; set; }
 
-        public override string ToString()
-        {
-            return $"Node (Value: {Value}, Next: {Next?.Value}";
-        }
+        public Node<T> Previous { get; set; }
+
+        public T Value { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -25,7 +22,9 @@ namespace ADS.DataStructures
 
         public override int GetHashCode()
         {
-            return Value.GetHashCode() ^ Next.Value.GetHashCode();
+            return Value?.GetHashCode() ?? 1
+                ^ Next?.Value?.GetHashCode() ?? 0
+                ^ Previous?.Value?.GetHashCode() ?? 0;
         }
 
         public static bool operator ==(Node<T> lhs, Node<T> rhs)

@@ -31,6 +31,7 @@ The whole idea of list project is to re-visit the fundamentals of computer progr
 
 * [Data Structures](#data-structures)
   * [Singly Linked List](#singly-linked-list)
+  * [Doubly Linked List](#doubly-linked-list)
 
 ---
 
@@ -840,6 +841,126 @@ class SinglyLinkedList {
         const nodes = this.toArray();
         return `SinglyLinkedList [ ${nodes.join(' -> ')} ]`;
     }
+}
+
+```
+
+### Doubly Linked List
+
+* A _Doubly Linked List_ is a data structure that represents a sequential list of _nodes_.
+* Each _node_ in the list contains a value and pointers to the next and previous _nodes_ that forms part of list.
+* The first _node_ is called the _Head_
+* The last node is called the _Tail_
+
+The following diagram illustrates a list of nodes, with each node consisting of a card as it's value, a _'Next'_ pointer to the next node in the list, a _'Previous'_ pointer to the previous node in the list.
+
+![doubly-linked-list](https://user-images.githubusercontent.com/33935506/42072606-ad9a8fc0-7b61-11e8-9241-59037648ba31.png)
+
+#### Examples
+
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/doubly-linked-list/DoublyLinkedList.cs)
+
+```csharp
+C#
+
+public sealed class DoublyLinkedList<T> where T : class
+{
+    public long Count { get; private set; }
+
+    public Node<T> Head { get; private set; }
+
+    public Node<T> Tail { get; private set; }
+
+    public bool Any()
+    {
+        return Head != null;
+    }
+
+    public void AddFront(T value)
+    {
+        var node = new Node<T>(value);
+        node.Next = Head;
+
+        if (Head == null)
+        {
+            Tail = node;
+        }
+        else
+        {
+            Head.Previous = node;
+        }
+
+        Head = node;
+        Count++;
+    }
+
+    public void AddEnd(T value)
+    {
+        var node = new Node<T>(value);
+
+        if (Tail == null)
+        {
+            Head = node;
+        }
+        else
+        {
+            Tail.Next = node;
+            node.Previous = Tail;
+        }
+
+        Tail = node;
+        Count++;
+    }
+
+    public Node<T> RemoveFront()
+    {
+        if (Head == null) return null;
+
+        var removedNode = Head;
+
+        if (Head.Next == null)
+            Tail = null;
+        else
+            Head.Next.Previous = null;
+
+        Head = Head.Next;
+        removedNode.Next = null;
+        Count--;
+
+        return removedNode;
+    }
+
+    public Node<T> RemoveEnd()
+    {
+        if (Head == null) return null;
+
+        var removedNode = Tail;
+
+        if (Tail.Previous == null)
+            Head = null;
+        else
+            Tail.Previous.Next = null;
+
+        Tail = Tail.Previous;
+        removedNode.Previous = null;
+        Count--;
+
+        return removedNode;
+    }
+}
+
+public sealed class Node<T> where T : class
+{
+    public Node(T value)
+    {
+        Value = value;
+    }
+
+    public T Value { get; private set; }
+
+    public Node<T> Next { get; set; }
+
+    public Node<T> Previous { get; set; }
 }
 
 ```
