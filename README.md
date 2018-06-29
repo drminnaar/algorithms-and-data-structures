@@ -734,7 +734,7 @@ The following diagram illustrates a list of nodes, with each node consisting of 
 
 #### Examples
 
-[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/SinglyLinkedList.cs)
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/SinglyLinkedList/SinglyLinkedList.cs)
 
 ```csharp
 C#
@@ -858,7 +858,7 @@ The following diagram illustrates a list of nodes, with each node consisting of 
 
 #### Examples
 
-[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/doubly-linked-list/DoublyLinkedList.cs)
+[C# Example](https://github.com/drminnaar/algorithms-and-data-structures/blob/master/csharp-ads/src/ADS.DataStructures/DoublyLinkedList/DoublyLinkedList.cs)
 
 ```csharp
 C#
