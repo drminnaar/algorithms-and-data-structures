@@ -160,9 +160,19 @@ For example:
 * Run _'Singly Linked List'_ Test
 
   ```bash
-  npm run singly-linked-list
+  npm run test-singly-linked-list
   ```
 
   ```bash
-  npm run singly-linked-list:watch
+  npm run test-singly-linked-list:watch
+  ```
+
+* Run _'Doubly Linked List'_ Test
+
+  ```bash
+  npm run test-doubly-linked-list
+  ```
+
+  ```bash
+  npm run test-doubly-linked-list:watch
   ```

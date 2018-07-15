@@ -12,6 +12,8 @@
         "test-quicksort": "jest ./algorithms/sorting/quickSort/test.js --watch",
         "test-singly-linked-list": "jest ./data-structures/singly-linked-list/test.js",
         "test-singly-linked-list:watch": "jest ./data-structures/singly-linked-list/test.js --watch",
+        "test-doubly-linked-list": "jest ./data-structures/doubly-linked-list/test.js",
+        "test-doubly-linked-list:watch": "jest ./data-structures/doubly-linked-list/test.js --watch",
         "test": "jest"
     },
     "keywords": [],
