@@ -1,12 +1,14 @@
+![cover](https://repository-images.githubusercontent.com/134303710/eb049280-a362-11eb-86d1-bb0c08ef19e4)
+
 # Algorithms and Data Structures
 
-This project is a compilation of various algorithms and data structures that have been implemented using different programming lanaguages.
+This project is a compilation of various algorithms and data structures that have been implemented using *C#* and *Javascript*.
 
 ---
 
 ## Overview
 
-The whole idea of list project is to re-visit the fundamentals of computer programming. However, what makes list project perhaps a little different is that these fundamentals will be explored using different programming languages. By exploring the funamentals using different programming languages (and paradigms), the aim is to develop an aptitude to think differently about solving problems.
+The idea behind this project is to re-visit the fundamentals of computer programming. These fundamentals will be explored using 2 of my favourite programming languages, namely *C#* and *Javascript*. The primary aim is to develop an aptitude to think differently about solving problems. Also, by understanding these fundamentals, one can begin to think about solving problems more efficiently.
 
 ---
 
